@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Prepare Buildenv") {
+        stage('Prepare Buildenv') {
             steps {
                 echo 'create docker container'
             }
