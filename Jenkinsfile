@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Prepare Buildenv') {
             steps {
-                echo 'create docker container'
+                echo 'create docker container for $GIT_COMMIT'
             }
         }
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Building $GIT_COMMIT'
             }
         }
         stage('Unit Tests') {
