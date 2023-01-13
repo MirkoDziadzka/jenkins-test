@@ -4,12 +4,14 @@ pipeline {
     stages {
         stage('Prepare Buildenv') {
             steps {
-                echo 'create docker container'
+                echo 'create docker build container'
+                echo 'push docker build container'
             }
         }
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Build..'
+                echo 'use docker container'
             }
         }
         stage('Unit Tests') {
@@ -17,12 +19,17 @@ pipeline {
                 echo 'Testing 1'
             }
         }
-        stage('Functional Tests') {
+        stage('Data migration unit tests') {
             steps {
-                echo 'Testing 1'
+                echo 'Data migration'
             }
         }
-        stage('Migration Tests') {
+        stage('Acceptance Tests') {
+            steps {
+                echo 'testing '
+            }
+        }
+        stage('Data Migration Tests') {
             steps {
                 echo 'Testing 1'
             }
