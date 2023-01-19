@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Migration Tests') {
             steps {
-                echo 'Testing 1'
+                echo 'Testing for $BUILD_NUMBER'
             }
         }
         stage('Performance Tests') {
