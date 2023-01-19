@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Performance Tests') {
             steps {
-                echo 'Testing 1'
+                echo "Running ${env.BUILD_NUMBER} on ${env.JENKINS_URL}"
             }
         }
         stage('Security Scans') {
