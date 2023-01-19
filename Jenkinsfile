@@ -10,6 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building $GIT_COMMIT'
+                sh 'docker build . --tag app:1.0-$BUILD_NUMBER'
             }
         }
         stage('Unit Tests') {
